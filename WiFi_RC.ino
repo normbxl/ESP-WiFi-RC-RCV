@@ -75,7 +75,7 @@ const IPAddress ipAddr(192, 168, 2, 1);
 const IPAddress gateway(192, 168, 2, 1);
 const IPAddress subnet(255, 255, 255, 0);
 
-uint8_t macAddress[7] = { 0 };
+uint8_t macAddress[8] = { 0 };
 char ssid[20];
 WiFiUDP udp;
 
