@@ -35,8 +35,8 @@ The two GPIOs for the servo signal are free and can be configured as digital out
 {
   "cmd": "set",
   "type": "config",
-  "S1": "SERVO", // other possible values:NOUSE, DIGIT, ANLOG
-  "S2": "SERVO" // other possible values:NOUSE, DIGIT, ANLOG
+  "S1": "SERVO", /*other possible values:NOUSE, DIGIT, ANLOG */
+  "S2": "SERVO" /* other possible values:NOUSE, DIGIT, ANLOG */
 }
 ```
 
@@ -60,7 +60,7 @@ The returned JSON contains the port configuration and the current control values
         "value" : 123
     },
     "S2": {
-        "type": "ANLOG", // DIGIT, NOUSE
+        "type": "ANLOG",
         "value" : 123
     },
     "M1": {
