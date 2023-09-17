@@ -35,6 +35,10 @@
 #define PIN_S1				14
 #define PIN_S2				16
 
+#ifndef PWMRANGE
+#define PWMRANGE 1023
+#endif
+
 Port_t ports[MAX_NUM_PORTS] = { \
   {SERVO,		0,	PIN_S1,		0 },	// S1
   {SERVO,		0,	PIN_S2,		0 },	// S2
@@ -75,7 +79,7 @@ const IPAddress ipAddr(192, 168, 2, 1);
 const IPAddress gateway(192, 168, 2, 1);
 const IPAddress subnet(255, 255, 255, 0);
 
-uint8_t macAddress[7] = { 0 };
+uint8_t macAddress[8] = { 0 };
 char ssid[20];
 WiFiUDP udp;
 
@@ -234,7 +238,7 @@ void initWiFi() {
 	else {
 		Serial.println("Failed to create UDP port.");
 	}
-	if (!MDNS.begin("esp8266")) {
+	if (!MDNS.begin("WiFi-RC")) {
 		Serial.println("Error setting up MDNS responder!");
 	}
 	else {
